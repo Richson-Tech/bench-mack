@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import styles from "./page.module.css";
 
-const category = () => {
+const category = ({ params }) => {
   return (
-    <div>category</div>
-  )
-}
+    <div>
+      <h1>{params.category}</h1>
+    </div>
+  );
+};
 
-export default category
+export default category;
