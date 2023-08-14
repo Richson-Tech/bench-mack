@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
-import styles from "./Navbar.module.css";
+import React from "react";
+import styles from "./navbar.module.css";
+import DarkModeToggle from "../DarkMode/DarkMode";
 
 const links = [
   {
@@ -11,11 +15,6 @@ const links = [
     id: 2,
     title: "Portfolio",
     url: "/portfolio",
-  },
-  {
-    id: 3,
-    title: "Blog",
-    url: "/blog",
   },
   {
     id: 4,
@@ -35,18 +34,19 @@ const links = [
 ];
 
 const Navbar = () => {
+
   return (
     <div className={styles.container}>
-      <Link className={styles.logo} href="/">
-        Bench-mack
+      <Link href="/" className={styles.logo}>
+        Bench-Mack
       </Link>
       <div className={styles.links}>
+        <DarkModeToggle />
         {links.map((link) => (
           <Link key={link.id} href={link.url} className={styles.link}>
             {link.title}
           </Link>
         ))}
-        <button className={styles.logout}>Logout</button>
       </div>
     </div>
   );
