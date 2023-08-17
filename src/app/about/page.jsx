@@ -5,7 +5,7 @@ import Button from "@/components/Button/Button";
 
 export const metadata = {
   title: "About",
-  description: "This isAbout Page",
+  description: "This is About Page",
 };
 
 const About = () => {
